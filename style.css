@@ -1,0 +1,201 @@
+body{
+    display: grid;
+    justify-items: center;
+}
+
+#calculatore{
+    background: #333;
+    width: 18rem;
+    height: 23rem;
+    display: grid;
+    margin: auto;
+    box-shadow: 4px 3px 20px #7a7a7a5e;
+    padding: 20px 10px;
+    align-content: center;
+    justify-content: center;
+}
+#resulte{
+    width: 15rem;
+    display: flex;
+    border-bottom: 3px solid;
+    height: 8rem;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    font-family: sans-serif; 
+    margin: auto;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+#calculatore button{
+   
+    cursor: pointer;
+    background-color: #4a4949;
+    border-radius: 5px;
+    color: #fefefe;
+   font-size: 9px;
+    border: none;
+
+
+}
+#calculatore button:active{
+    background-color: #fff;
+    color: #333;
+}
+
+.btns{
+   
+    display: grid;
+    grid-template-rows: 3rem 3rem 3rem 3rem ;
+    grid-template-columns: 3rem 3rem 3rem 3rem 3rem;
+    grid-gap: 2mm;
+    justify-content: center;
+    padding-top: 1rem;
+
+}
+.option1{
+    grid-column-start: 4;
+    grid-column-end: 6;
+
+}
+.option{
+    grid-column-start: 3;
+    grid-column-end: 6;
+
+}
+.alert{
+    background: rgb(249, 0, 63);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+    border-radius: .5rem;
+    height: 3rem;
+    position: relative;
+    align-content: center;
+    flex-wrap: wrap;
+    top: -4rem;
+   
+
+}
+.show_alert{
+    animation: alert 1s ease-in-out ;
+    animation-fill-mode: forwards;
+}
+
+
+div.option{
+    width: 18rem;
+   display: none;  
+   height: 47rem; 
+    background: #323232;
+    position: absolute;
+}
+
+div.show_option{
+    display: grid;
+    color: #fff;
+    
+    font-family: sans-serif;
+    font-size: 1rem;
+    animation: show_option .5s ease-in-out forwards;
+    justify-items: center;
+    align-content: stretch;
+
+}
+h4,#close_btn{
+    cursor: pointer;
+    height: 1rem;
+    color: #fff;
+   
+}
+h4:hover,#close_btn:hover{
+    color: rgb(7, 119, 218);
+}
+h4:active,#close_btn:hover{
+    color: rgb(195, 195, 195);
+}
+.obtn{
+width: 90%;
+margin-bottom: 2rem;
+}
+
+/* show history div */
+.history{
+  
+    display: none;
+    position: absolute;
+    background:#333;
+}
+.show_history{
+    display: block;
+    animation: show_history .5s ease-out forwards;
+}
+
+
+
+.adv_cal_btns{
+    margin-top: .8rem;
+    display: none;
+    grid-gap: .1rem;
+    grid-template-columns: 3rem 3rem 3rem 3rem 3rem;
+    grid-template-rows: 2.3rem 2.3rem 2.3rem 2.3rem 2.3rem 2.3rem 2rem;
+    grid-gap:.3rem ;
+}
+
+@keyframes show_history {
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    100%{
+        width: 18rem;
+height: 24rem;
+    }
+}
+@keyframes show_option {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 24.22rem;
+    }
+}
+
+
+@keyframes alert {
+0%{
+    top: -4rem;
+}    
+30%{
+    top: 1rem;
+    left: 0px;
+}    
+40%{
+   
+    left: 1rem;
+}    
+50%{
+    left: 0px;
+}    
+60%{
+    left: 1rem;
+}    
+70%{
+    left: 0px;
+}    
+   
+80%{
+    top: 1rem;
+    left: 0px;
+    
+}    
+
+100%{
+    left: 0px;
+    top: -4rem;
+}    
+}
